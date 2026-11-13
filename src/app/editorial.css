@@ -28,9 +28,8 @@ h1, h2 { color: var(--ink); }
 em { color: var(--rust); }
 .site-header { background: var(--jalapeno); border-color: color-mix(in srgb, var(--paper) 25%, var(--jalapeno)); color: var(--paper); }
 .header-inner { height: 88px; }
-.site-header .brand-image { filter: grayscale(1) invert(1) contrast(4); mix-blend-mode: screen; }
-.site-header .brand-wordmark { filter: none; mix-blend-mode: normal; }
-.brand-wordmark-image { display: block; position: absolute; inset: 0; clip-path: inset(0 0 28% 0); filter: grayscale(1) invert(1) contrast(4); mix-blend-mode: screen; }
+.site-header .brand-image { filter: none; mix-blend-mode: normal; }
+.brand-wordmark-image { display: block; position: absolute; inset: 0 0 28%; }
 .brand-surname { display: block; position: absolute; left: 0; right: 0; bottom: 0; font-family: "DM Sans", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .43em; line-height: 1.25; text-align: center; text-transform: uppercase; padding-left: .43em; color: var(--paper); }
 .navigation > a.active { color: var(--paper); }
 .navigation > a:not(.contact-link)::after { height: 2px; background: var(--paper); }
@@ -228,7 +227,7 @@ em { color: var(--rust); }
 footer { position: relative; isolation: isolate; background: var(--jalapeno); color: var(--paper); padding-top: 22px; margin-top: 55px; }
 .footer-wave { position: absolute; width: 100%; height: 55px; top: -54px; left: 0; color: var(--jalapeno); z-index: -1; }
 .footer-main { gap: 30px; padding-bottom: 26px; align-items: center; }
-.footer-brand > .brand-image { filter: grayscale(1) invert(1) contrast(4); mix-blend-mode: screen; }
+.footer-brand > .brand-image { filter: none; mix-blend-mode: normal; }
 .footer-brand .footer-tagline { color: var(--paper); font-size: 9px; margin-top: 8px; }
 .footer-invitation { font-family: "DM Serif Display", Georgia, serif; font-style: italic; font-size: 27px; border-left: 1px solid #fff5e970; padding-left: 35px; }
 .footer-email { display: flex; gap: 12px; align-items: center; font-size: 13px; overflow-wrap: anywhere; }
