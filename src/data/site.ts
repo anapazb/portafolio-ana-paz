@@ -6,7 +6,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/anapazb/",
   github: "",
   cv: "/cv/CV_Ana_Paz_Bauser.pdf",
-  photo: "",
+  photo: "/images/ana-paz/retrato.webp",
 };
 export const navigation = [
   { href: "/", label: "Inicio" }, { href: "/acerca-de-mi", label: "Acerca de mí" }, { href: "/estudios", label: "Estudios" }, { href: "/idiomas", label: "Idiomas" }, { href: "/proyectos", label: "Proyectos" }, { href: "/experiencias", label: "Experiencias" }, { href: "/contacto", label: "Contacto" },
