@@ -12,7 +12,11 @@ export const metadata: Metadata = {
   },
   description: "El mundo de Ana Paz Bauser: Ingeniería en Sistemas de Información, proyectos, idiomas y experiencias interculturales.",
   icons: {
-    icon: "/brand/icon.svg"
+    icon: [
+      { url: "/brand/favicon-jalapeno.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/brand/favicon-jalapeno-32.png", type: "image/png", sizes: "32x32" }
+    ],
+    apple: [{ url: "/brand/apple-touch-icon-jalapeno.png", type: "image/png", sizes: "180x180" }]
   }
 };
 export default function RootLayout({

@@ -64,3 +64,13 @@ async function traceLogo(source, destination, maxY = Infinity) {
 
 await traceLogo("public/brand/ana-paz.png", "public/brand/ana-paz-light.svg", 450);
 await traceLogo("public/brand/apb.png", "public/brand/apb-light.svg");
+
+const monogram = (await fs.readFile("public/brand/apb-light.svg", "utf8"))
+  .replace(/^<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "");
+const favicon = `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><rect width="128" height="128" rx="26" fill="#756C4F"/><g transform="translate(10 37) scale(0.1538461538)">${monogram}</g></svg>\n`;
+for (const file of ["public/brand/favicon-jalapeno.svg", "public/brand/icon.svg", "public/icon.svg"]) {
+  await fs.writeFile(file, favicon);
+}
+await sharp(Buffer.from(favicon)).resize(32, 32).png().toFile("public/brand/favicon-jalapeno-32.png");
+await sharp(Buffer.from(favicon)).resize(180, 180).png().toFile("public/brand/apple-touch-icon-jalapeno.png");
+console.log("Jalapeño favicon SVG, 32px PNG and 180px Apple icon generated.");
